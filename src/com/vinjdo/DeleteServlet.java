@@ -17,6 +17,7 @@ public class DeleteServlet extends HttpServlet {
 		String str=new String("30112015");
 		PersistenceManager pm=PMF.get().getPersistenceManager();
 	Customer res=(Customer)pm.getObjectById(Customer.class,str);
+	resp.getWriter().print(res.getName()+"welcome");
    pm.deletePersistent(res);
 	}
 	}
